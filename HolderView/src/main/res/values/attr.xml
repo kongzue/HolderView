@@ -11,5 +11,7 @@
 
         <attr name="retryButtonText" format="string" />
         <attr name="retryButtonVisibility" format="boolean"/>
+
+        <attr name="themeColor" format="color"/>
     </declare-styleable>
 </resources>

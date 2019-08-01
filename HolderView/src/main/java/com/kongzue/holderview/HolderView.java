@@ -42,6 +42,8 @@ public class HolderView extends RelativeLayout {
     private String badNetText = "网络不稳定，请稍候重试";
     private String errorText = "加载错误，请稍候重试";
     
+    private int themeColor = -1;
+    
     private String retryButtonText = "点击重试";
     private boolean showRetryButton = true;
     
@@ -79,6 +81,8 @@ public class HolderView extends RelativeLayout {
             emptyImageResId = typedArray.getResourceId(R.styleable.HolderView_emptyImageResId, emptyImageResId);
             badNetResId = typedArray.getResourceId(R.styleable.HolderView_badNetResId, badNetResId);
             errorImageResId = typedArray.getResourceId(R.styleable.HolderView_errorImageResId, errorImageResId);
+            
+            themeColor = typedArray.getColor(R.styleable.HolderView_themeColor,themeColor);
             
             retryButtonText = getResString(typedArray, R.styleable.HolderView_retryButtonText, retryButtonText);
             showRetryButton = typedArray.getBoolean(R.styleable.HolderView_retryButtonVisibility, showRetryButton);
@@ -121,6 +125,11 @@ public class HolderView extends RelativeLayout {
         TextView txtViewHolderTip = tipView.findViewById(R.id.txt_viewHolder_tip);
         ProgressBar psgViewHolderProgress = tipView.findViewById(R.id.psg_viewHolder_progress);
         TextView btnViewHolderRetry = tipView.findViewById(R.id.btn_viewHolder_retry);
+        
+        if (themeColor!=-1) {
+            imgViewHolderImage.setColorFilter(themeColor);
+            txtViewHolderTip.setTextColor(themeColor);
+        }
         
         imgViewHolderImage.setVisibility(VISIBLE);
         txtViewHolderTip.setVisibility(VISIBLE);
