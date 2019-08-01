@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HolderView">
+        <attr name="emptyText" format="string" />
+        <attr name="badNetText" format="string" />
+        <attr name="errorText" format="string" />
+
+        <attr name="emptyImageResId" format="reference" />
+        <attr name="badNetResId" format="reference" />
+        <attr name="errorImageResId" format="reference" />
+
+        <attr name="retryButtonText" format="string" />
+        <attr name="retryButtonVisibility" format="boolean"/>
+    </declare-styleable>
+</resources>
