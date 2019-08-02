@@ -102,6 +102,11 @@ app:retryButtonText  | 重试按钮文本  | String
 app:retryButtonVisibility  | 是否显示重试按钮  | boolean
 app:themeColor  | 主体颜色  | ColorInt
 
+临时显示自己的提示：
+```
+holdView.showTip(R.mipmap.img_empty_data, "提示文字");
+```
+
 ## 开源协议
 ```
 Copyright Kongzue HolderView
